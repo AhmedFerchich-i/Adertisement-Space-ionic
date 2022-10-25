@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Add</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" class="background-image" [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card class="ion-align-self-center" color="lighter_blue" class="transparent">
+          <ion-item color="lighter_blue">
+            <ion-textarea style=" color: rgba(6, 32, 66, 0.959);" [(ngModel)]="ad" placeholder="Write Ad here">
+            </ion-textarea>
+          </ion-item>
+          <ion-item color="lighter_blue">
+            <ion-textarea style=" color: rgba(6, 32, 66, 0.959);" [(ngModel)]="category"
+              placeholder="Write category here"></ion-textarea>
+          </ion-item>
+
+
+
+
+          <ion-button color="primary" class="ion-margin" expand="block" (click)="add()">Add your advertisement
+          </ion-button>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+</ion-content>

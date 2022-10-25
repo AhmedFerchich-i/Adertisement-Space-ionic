@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button (click)="logout()" >
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-button>
+    <ion-title>
+      <ion-icon name="checkbox-outline"></ion-icon> My Adds
+
+    </ion-title>
+  </ion-toolbar>
+  <ion-button [routerLink]="['/add']" >
+    new ad
+  </ion-button>
+</ion-header>
+
+<ion-content class="ion-padding" class="background-image" [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-header class="ion-padding">
+          <ion-toolbar color="lighter_blue" style=" color: rgba(6, 32, 66, 0.959);">
+            <ion-title> <strong> Your Adds</strong></ion-title>
+
+
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-card *ngFor="let item of userAds" class="transparent">
+
+          <ion-card-header>
+
+            <ion-card-subtitle >
+              {{item.category}}
+            </ion-card-subtitle>
+            <ion-item color="lighter_blue" style=" color: rgba(6, 32, 66, 0.959);">
+
+              <ion-label> {{ item.name }}</ion-label>
+            </ion-item>
+          </ion-card-header>
+
+
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNewItem()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
