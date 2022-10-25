@@ -1,0 +1,7 @@
+{
+  "name": "adManagement",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
